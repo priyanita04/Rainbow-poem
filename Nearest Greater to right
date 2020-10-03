@@ -44,7 +44,8 @@ void NearestGreaterNumber(long arr[], int size)
         }
     }
     reverse(v.begin(),v.end());
-   
+   for(int j=0; j<v.size();j++){
+    	cout<<v[j]<<" ";
     
     for(int i = 0; i<n; i++)
     {
