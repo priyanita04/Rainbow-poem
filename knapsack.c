@@ -5,7 +5,13 @@ int max(int a, int b){
 }
 int knap(int weight[], int value[],int C, int n)
 {
-	
+if(n==0||C<=0)
+		return 0;
+	else{
+		if(weight[n-1]<=C)
+			return max(value[n-1]+knap(weight,value,C-weight[n-1],n-1),knap(weight,value,C,n-1));
+		else return knap(weight,value,C,n-1);
+	}		
 }
 void main()
 {
